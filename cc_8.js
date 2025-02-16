@@ -23,3 +23,19 @@ calculateDiscount = function(price, discountRate) {
 calculateDiscount(100, 0.2); 
 calculateDiscount(250, 0.15); 
 
+
+// Task 3: Arrow Function
+
+// Write an arrow function calculateServiceFee(amount, serviceType) that applies a fee:
+calculateServiceFee = (amount, serviceType) => {
+    let fee = 0;
+    if (serviceType === "Premium") fee = amount * 0.15; // "Premium" → 15% of the amount
+    else if (serviceType === "Standard") fee = amount * 0.1; // "Standard" → 10% of the amount
+    else fee = amount * 0.05; // "Basic" → 5% of the amount
+    console.log(`Service Fee: $${fee.toFixed(2)}`);
+}
+
+// Test Data:
+calculateServiceFee(200, "Premium"); // Expected output: "Service Fee: $30.00"
+calculateServiceFee(500, "Standard"); // Expected output: "Service Fee: $50.00"
+
